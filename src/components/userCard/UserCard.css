@@ -1,40 +1,89 @@
 .list-item-card {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-        padding: 14px;
-        background: #ffffff;
-        border: 1px solid #e5e7eb;
-        border-radius: 10px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
-        transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
+    transition: all 0.2s ease;
+    flex-wrap: wrap; 
 }
 
 .list-item-card:hover {
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
-        transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
 }
 
 .card-avatar {
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
-        object-fit: cover;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
 }
 
 .card-info {
-        display: flex;
-        flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    min-width: 0; 
 }
 
 .card-name {
-        font-weight: 600;
-        font-size: 17px;
-        color: #1f2937;
+    font-weight: 600;
+    font-size: 17px;
+    color: #1f2937;
+    word-break: break-word;
 }
 
 .card-email {
-        font-size: 14px;
-        color: #6b7280;
-        margin-top: 3px;
+    font-size: 14px;
+    color: #6b7280;
+    margin-top: 3px;
+    word-break: break-all;
+}
+
+
+@media (max-width: 640px) {
+    .list-item-card {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .card-avatar {
+        width: 48px;
+        height: 48px;
+    }
+
+    .card-name {
+        font-size: 15px;
+    }
+
+    .card-email {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .list-item-card {
+        padding: 14px;
+        gap: 12px;
+    }
+
+    .card-avatar {
+        width: 52px;
+        height: 52px;
+    }
+
+    .card-name {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .list-item-card {
+        padding: 16px;
+    }
 }

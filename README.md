@@ -91,5 +91,9 @@ src/utils/hooks.tsx — useUsers React Query hook wrapping fetchUsers
         -Run npm install.
         -Run npm run dev and open the Vite URL.
 
+**ScreenShots**
+![LoadedList](image.png)        
+![LoadingState](image-1.png)
+
 **License**
 This project is released under the MIT License.

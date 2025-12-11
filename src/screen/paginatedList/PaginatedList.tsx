@@ -2,8 +2,8 @@ import { useCallback, useMemo, useState } from "react";
 import UserCard from "../../components/userCard/UserCard";
 import UserListSkeleton from "../../components/userListSkeleton/UserListSkeleton";
 import { useUsers } from "../../utils/hooks";
-import ListFooter from "./components/listFooter/ListFooter";
-import ListHeader from "./components/listHeader/ListHeader";
+import ListFooter from "./components/ListFooter/ListFooter";
+import ListHeader from "./components/ListHeader/ListHeader";
 import "./PaginatedList.css";
 
 const LIMIT = 6;

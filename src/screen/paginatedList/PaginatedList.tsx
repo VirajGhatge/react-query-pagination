@@ -2,15 +2,15 @@ import { useCallback, useMemo, useState } from "react";
 import UserCard from "../../components/userCard/UserCard";
 import UserListSkeleton from "../../components/userListSkeleton/UserListSkeleton";
 import { useUsers } from "../../utils/hooks";
-import ListFooter from "./components/ListFooter/ListFooter";
-import ListHeader from "./components/ListHeader/ListHeader";
+import ListFooter from "./components/listFooter/ListFooter";
+import ListHeader from "./components/listHeader/ListHeader";
 import "./PaginatedList.css";
 
 const LIMIT = 6;
 
 const PaginatedList = () => {
   const [skip, setSkip] = useState(0);
-  const { data, isPending, isError } = useUsers(skip, LIMIT);
+  const { data,isFetching, isError } = useUsers(skip, LIMIT);
 
   const users = data?.users ?? [];
   const total = data?.total ?? 0;
@@ -52,7 +52,7 @@ const PaginatedList = () => {
       />
 
       <div className="list-body">
-        {isPending ? (
+        {isFetching ? (
           <UserListSkeleton />
         ) : users.length > 0 ? (
           usersList

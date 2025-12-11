@@ -31,7 +31,7 @@ export function useUsers(skip: number, limit = 10) {
       queryClient
         .prefetchQuery({
           queryKey: [USERS_QUERY_KEY, nextSkip, limit],
-          queryFn: () => fetchUsers(skip,limit),
+          queryFn: () => fetchUsers(nextSkip,limit),
         })
         .catch(() => {});
     }

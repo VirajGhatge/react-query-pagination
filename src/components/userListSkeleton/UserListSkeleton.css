@@ -1,0 +1,79 @@
+.skeleton-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+}
+
+
+
+.user-card-skeleton {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px;
+        background: #fff;
+        border-radius: 10px;
+        border: 1px solid #eef2f7;
+        box-shadow: 0 1px 2px rgba(16, 24, 40, 0.03);
+        overflow: hidden;
+}
+
+
+.avatar-skeleton {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        flex: 0 0 56px;
+        background: linear-gradient(90deg, #ececec 25%, #f6f6f6 37%, #ececec 63%);
+        background-size: 400% 100%;
+        animation: shimmer 1.2s linear infinite;
+}
+
+
+.skeleton-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        min-width: 0;
+}
+
+.name-skeleton {
+        width: 60%;
+        height: 14px;
+        border-radius: 6px;
+        background: linear-gradient(90deg, #ececec 25%, #f6f6f6 37%, #ececec 63%);
+        background-size: 400% 100%;
+        animation: shimmer 1.2s linear infinite;
+}
+
+.email-skeleton {
+        width: 40%;
+        height: 12px;
+        border-radius: 6px;
+        background: linear-gradient(90deg, #ececec 25%, #f6f6f6 37%, #ececec 63%);
+        background-size: 400% 100%;
+        animation: shimmer 1.2s linear infinite;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+        .avatar-skeleton,
+        .name-skeleton,
+        .email-skeleton {
+                animation: none;
+                background: #ececec;
+        }
+}
+
+
+@keyframes shimmer {
+        0% {
+                background-position: 200% 0;
+        }
+
+        100% {
+                background-position: -200% 0;
+        }
+}
